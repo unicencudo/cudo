@@ -1,10 +1,46 @@
-<div class="nav">
-    <div class="ui grid">
-        <div class="four wide column"></div>
 
-        <div class="eight wide column">
-            <a href="/posts"><h1><%= blog.title %></h1></a>
-            <p><%= blog.description %></p>
-        </div>
+<ul id="myTab" class="nav nav-tabs">
+    <li class="active">
+        <a href="#home" data-toggle="tab">
+            Home
+        </a>
+    </li>
+    <li>
+        <a href="#analytics" data-toggle="tab">
+            Analytics
+        </a>
+    </li>
+    <!--<li><a href="#analytics" data-toggle="tab">Analytics</a></li>-->
+    <li class="dropdown">
+        <a href="#" id="myTabDrop1" class="dropdown-toggle"
+           data-toggle="dropdown">Transport Management
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+            <li><a href="#order" tabindex="-1" data-toggle="tab">Orders and Vehicles</a></li>
+            <li><a href="#delivery" tabindex="-1" data-toggle="tab">Delivery Plan</a></li>
+        </ul>
+    </li>
+    <li><a href="#mall" data-toggle="tab">Mall/Location Management</a></li>
+    <li><a href="#setting" data-toggle="tab">Settings</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade in active" id="home">
+        <h2>Home Page</h2>
+    </div>
+    <div class="tab-pane fade" id="analytics">
+        <%- include('content_analytics'); %>
+    </div>
+    <div class="tab-pane fade" id="order">
+        <%- include('content_orders'); %>
+    </div>
+    <div class="tab-pane fade" id="delivery">
+        <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。</p>
+    </div>
+    <div class="tab-pane fade" id="mall">
+        <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。</p>
+    </div>
+    <div class="tab-pane fade" id="setting">
+        <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。</p>
     </div>
 </div>
