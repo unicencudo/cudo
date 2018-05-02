@@ -1,13 +1,29 @@
 const {Pool} = require('pg')
+const Sequelize = require('sequelize');
 
 // Your postgress configuration:
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
-    database: 'CODU',
+    database: 'CUDO',
     password: 'post',
     port: 5432,
 })
+
+const sequelize = new Sequelize('CUDO', 'postgres', 'post', {
+    host: 'localhost',
+    port: 5432,
+    dialect: 'postgres',
+    operatorsAliases: false,
+
+    pool: {
+        max: 30,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+    },
+
+});
 
 
 // query:
@@ -19,5 +35,6 @@ module.exports = {
             console.log('executed query', {text, duration, rows: res.rowCount})
             callback(err, res)
         })
-    }
+    },
+    sequelize:sequelize
 }
