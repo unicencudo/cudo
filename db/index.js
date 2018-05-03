@@ -1,7 +1,7 @@
 const {Pool} = require('pg')
 const Sequelize = require('sequelize');
 
-// Your postgress configuration:
+// Your postgres configuration:
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
