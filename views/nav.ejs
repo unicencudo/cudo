@@ -1,4 +1,39 @@
 
+<!--<nav class="navbar navbar-default">-->
+    <!--<div class="container-fluid">-->
+         <!--&lt;!&ndash;Brand and toggle get grouped for better mobile display&ndash;&gt;-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#">CUDO</a>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>-->
+                <!--<li><a href="#">Analytics</a></li>-->
+                <!--<li><a href="#">Transport Management</a></li>-->
+                <!--<li><a href="#">Mall/Location Management</a></li>-->
+                <!--<li><a href="#">Setting</a></li>-->
+
+            <!--</ul>-->
+            <!--<form class="navbar-form navbar-right">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" class="form-control" placeholder="Search">-->
+                <!--</div>-->
+                <!--<button type="submit" class="btn btn-default">Submit</button>-->
+            <!--</form>-->
+        <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+<!--</nav>-->
+
+
+
 <ul id="myTab" class="nav nav-tabs">
     <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
     <li><a href="#analytics" data-toggle="tab">Analytics</a></li>
@@ -8,7 +43,8 @@
             <b class="caret"></b>
         </a>
         <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-            <li><a href="#order" tabindex="-1" data-toggle="tab">Orders and Vehicles</a></li>
+            <li><a href="#order" tabindex="-1" data-toggle="tab">Orders</a></li>
+            <li><a href="#vehicle" tabindex="-1" data-toggle="tab">Vehicles</a></li>
             <li><a href="#delivery" tabindex="-1" data-toggle="tab">Delivery Plan</a></li>
         </ul>
     </li>
@@ -17,13 +53,16 @@
 </ul>
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade in active" id="home">
-        <h2>Home Page</h2>
+        <h2><%- include('content_home'); %></h2>
     </div>
     <div class="tab-pane fade" id="analytics">
         <%- include('content_analytics'); %>
     </div>
     <div class="tab-pane fade" id="order">
         <%- include('content_orders'); %>
+    </div>
+    <div class="tab-pane fade" id="vehicle">
+        <%- include('content_vehicle'); %>
     </div>
     <div class="tab-pane fade" id="delivery">
         <%- include('content_deliveryplan'); %>
