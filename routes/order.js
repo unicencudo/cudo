@@ -22,6 +22,20 @@ router.get('/all', function (req, res, next) {
 });
 
 
+/* GET for test
+* */
+router.get('/test', function (req, res, next) {
+    let orders = [{
+        id: 1,
+        name: "张三",
+        price: "100"
+    }]
+    res.json(orders);
+
+    //res.send("Select all orders");
+});
+
+
 /* POST select/insert one order
 * */
 router.post('/insert', function (req, res, next) {
